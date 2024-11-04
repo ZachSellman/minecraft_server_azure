@@ -1,4 +1,0 @@
-mc_server_host:
-  hosts:
-    mc_server:
-      ansible_host: adminuser@172.191.72.203 # -- static IP
