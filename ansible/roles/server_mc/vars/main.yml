@@ -1,0 +1,2 @@
+# Role specific variables not intended to be changed
+minecraft_dir: /opt/minecraft

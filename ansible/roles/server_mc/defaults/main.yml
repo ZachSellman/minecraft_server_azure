@@ -1,0 +1,3 @@
+# server_mc Role default variables
+server_jar_url: "https://piston-data.mojang.com/v1/objects/45810d238246d90e811d896f87b14695b7fb6839/server.jar"
+minecraft_user: minecraftuser

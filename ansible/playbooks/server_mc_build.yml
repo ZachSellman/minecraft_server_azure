@@ -1,0 +1,8 @@
+---
+- name: provision 
+  hosts: mc_server_host
+  gather_facts: no
+  become: yes
+  roles: 
+    - common
+    - server_mc

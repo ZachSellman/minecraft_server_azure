@@ -1,15 +1,3 @@
----
-- name: provision minecraft server
-  hosts: mc_server_host
-  gather_facts: no
-  become: yes
-
-  vars:
-    minecraft_user: minecraftuser
-    minecraft_dir: /opt/minecraft
-    server_jar_url: "https://piston-data.mojang.com/v1/objects/45810d238246d90e811d896f87b14695b7fb6839/server.jar"
-
-  tasks:
     - name: Update apt cache
       apt:
         update_cache: yes
@@ -85,17 +73,5 @@
         line: 'eula=TRUE' # - line to replace the search_string
         state: present
 
-      notify: Restart minecraft.service
-        - 
-
-  handlers:
-    - name: Reload systemd
-      systemd:
-        daemon_reload: yes
-
-    - name: Restart minecraft.service
-      systemd:
-        name: "minecraft.service"
-        state: restarted
-        
-        
+      notify: 
+        - Restart minecraft.service
