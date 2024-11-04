@@ -1,0 +1,3 @@
+# List of dependencies for Role server_mc.
+dependencies:
+  - common_config # Needs to be run first to ensure things like ufw are updated, apt updates, etc

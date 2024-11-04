@@ -1,0 +1,4 @@
+all:
+  hosts:
+    server_mc:
+      ansible_host: adminuser@172.171.215.98 # -- static IP
