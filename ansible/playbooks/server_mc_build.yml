@@ -2,7 +2,7 @@
 - name: provision server_mc
   hosts: server_mc
   gather_facts: no
-  become: yes
+  # become: yes -- removed this line; shouldn't be running as root for everything probably.
   roles: 
     - common_config
     - server_mc
